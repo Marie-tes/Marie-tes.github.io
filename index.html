@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Profile</title>
+   
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <ul>
+                <li><a href="#" onclick="showSection('home')">HOME</a></li>
+                <li><a href="#" onclick="showSection('about')">ABOUT</a></li>
+                <li><a href="#" onclick="showSection('contact')">CONTACT</a></li>
+            </ul>
+        </div>
+ 
+        <div id="home">
+            <div class="info">
+                <h3>Hi, I'm Criz Marie.</h3>
+                <h1><span>STUDENT</span></h1>
+                <h3>A passionate student of Bachelor of Science <br> in Computer Science at Tangub City Global College</h3>
+                <a href="#">Hire Me</a>
+            </div>
+            <div class="icons">
+                <a href="https://github.com/Marie-tes" target="_blank">
+                    <ion-icon name="logo-github" class="github-icon"></ion-icon>
+                </a>
+                <a href="https://www.facebook.com/marie.entera.5" target="_blank">
+                    <ion-icon name="logo-facebook" class="facebook-icon"></ion-icon>
+                </a>
+            </div>
+            
+        </div>
+ 
+        <div id="about" class="hidden">
+            <h2>About Me</h2>
+            <p>I am Criz Marie S. Entera from Aurora Zamboanga Del Sur and I am 20 years old. <br>
+                My hobbies are dancing and playing volleyball.</p>
+        </div>
+        
+        <div id="contact" class="hidden">
+            <h2>Contact Me</h2>
+            <p>Email: crizmarie@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+        <div class="image">
+                <img src="media.jpg" class="girl" alt="Profile Picture">
+            </div>
+    </div>
+ 
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        function showSection(section) {
+            document.getElementById('home').classList.add('hidden');
+            document.getElementById('about').classList.add('hidden');
+            document.getElementById('contact').classList.add('hidden');
+ 
+            if (section === 'home') {
+                document.getElementById('home').classList.remove('hidden');
+            } else if (section === 'about') {
+                document.getElementById('about').classList.remove('hidden');
+            } else if (section === 'contact') {
+                document.getElementById('contact').classList.remove('hidden');
+            }
+        }
+ 
+        // Show the home section by default
+        showSection('home');
+    </script>
+</body>
+</html>
+ 
